@@ -1,0 +1,122 @@
+﻿@keyframes color {
+    0%   { background: #d80707; }
+    20%  { background: #5f24be; }
+    40%  { background: #dbec6600; }
+    60%  { background: #ec96ec; }
+    80%  { background: #944d4d; }
+    100% { background: #03c282; }
+}
+
+@keyframes moving {
+    0%   {background-color:rgb(0, 0, 0); left:0px; top:0px;}
+    25%  {background-color:rgb(255, 255, 255); left:100px; top:20px;}
+    50%  {background-color:rgb(0, 0, 0); left:300px; top:200px;}
+    75%  {background-color:rgb(255, 255, 255); left:300px; top:100px;}
+    100% {background-color:rgb(0, 0, 0); left:300px; top:200px;}
+}
+
+@keyframes rotateCat {
+    0% {transform: rotate(90deg);}
+    25% { transform: rotate(180deg); -webkit-transform: rotate(180deg); -moz-transform: rotate(180deg); -ms-transform: rotate(180deg); -o-transform: rotate(180deg); }
+    50% { transform: rotate(360deg); -webkit-transform: rotate(360deg); -moz-transform: rotate(360deg); -ms-transform: rotate(360deg); -o-transform: rotate(360deg); }
+    75% { transform: rotate(360deg); -webkit-transform: rotate(360deg); -moz-transform: rotate(360deg); -ms-transform: rotate(360deg); -o-transform: rotate(360deg); }
+    10% { transform: rotate(20deg); -webkit-transform: rotate(20deg); -moz-transform: rotate(20deg); -ms-transform: rotate(20deg); -o-transform: rotate(20deg); }
+    
+}
+
+@keyframes movingCat {
+    0%   {left:1000px; top:100px;}
+    25%  {left:1000px; top:100px;}
+    50%  {left:2000px; top:0px;}
+    75%  {left:3000px; top:0px;}
+    100% {left:4000px; top:0px;}
+}
+
+
+
+
+body
+{
+    margin: 0%;
+    padding: 0%;
+    background-color: rgb(255, 255, 255);
+    animation:color 2s infinite linear;
+    -webkit-animation:color 2s infinite linear;
+    text-align: center;
+    padding: 2em;
+}
+
+.eyes{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 100;
+    text-align: center;
+
+}
+
+.eye{
+    width: 100px;
+    height: 100px;
+    background-color: rgb(0, 0, 0);
+    display:inline-block;
+    margin: 40px;
+    border-radius: 50%;
+    position: relative;
+    overflow: hidden;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    animation: moving 3s ease-in infinite alternate;
+    -webkit-animation: moving 3s ease-in infinite alternate;
+}
+
+.ball{
+    width: 10px;
+    height: 50px;
+    background: rgb(255, 255, 255);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+}
+
+.catDancing{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation:color 2s infinite linear;
+}
+
+.catrunning{
+    position: absolute;
+    right:100px;
+    bottom: 100px;
+    animation:movingCat 2s infinite linear;
+    -webkit-animation:movingCat 2s infinite linear;
+}
+
+.weirdcat{
+    position: absolute;
+    left: 100px;
+    top: 0px;
+
+}
+
+.text{
+    position: absolute;
+    animation:rotateCat 2s infinite linear;
+    left: 1100px;
+    top: 100px;
+    -webkit-animation:;
+}

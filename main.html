@@ -1,0 +1,64 @@
+﻿<!DOCTYPE html>
+
+<head>
+    <link rel="stylesheet" href="maincss.css">
+</head>
+<body>
+    <div class="catDancing">
+        <img src="catdancing.gif" alt="hehe XD" style="width:500px;height:1000px;">
+    </div>
+
+    <div class="music">
+        <audio autoplay loop id="100gecsAudio">
+            <source src="100gecs.mp3" type="audio/mpeg">
+        </audio>
+        
+        <script>
+            var audio = document.getElementById("100gecsAudio")
+            audio.volume = 0.15;
+        </script>
+    </div>
+
+<div class="eyes">
+    <div class="eye">
+        <div class="ball">
+
+        </div>
+    </div>
+
+    <div class="eye">
+        <div class="ball">
+        </div>
+    </div>
+</div>
+
+<div class="catrunning">
+    <img src="catrunning.gif" alt="EKSDEE" style="width:500px;height:500px;">
+</div>
+
+<div class="weirdcat">
+    <img src="weirdcat.gif" alt="EKSDEE" style="width:500px;height:500px;">
+
+
+</div>
+
+<div class="text">
+    <h1>HI FIONA :D</h1>
+</div>
+
+<script>
+    var balls = document.getElementsByClassName("ball");
+    document.onmousemove = function(){
+        var x = event.clientX * 100 / window.innerWidth + "%";
+        var y = event.clientY * 100 / window.innerHeight + "%";
+
+        for(var i=0;i<2;i++){
+            balls[i].style.left = x;
+            balls[i].style.top = y;
+            balls[i].style.transform = "translate(-"+x+",-"+y+")";
+        }
+
+    }
+</script>
+</body>
+</html>
